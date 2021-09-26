@@ -1,0 +1,426 @@
+/**
+Theme Name: Crypto Pugs
+Author: UnderMySkin
+Description: Crypto Pugs Theme
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: block;
+  height: 56px;
+  line-height: 56px;
+  white-space: nowrap;
+  padding: 0 24px;
+  font: 500 18px/40px "Roboto", sans-serif;
+  letter-spacing: 1.6px;
+  text-decoration: none;
+}
+.button_stroked {
+  border-radius: 8px;
+  border: 1px solid #0d51ff80;
+  color: #0d51ff;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+.main__title {
+  font: 700 62px/88px "Roboto", sans-serif;
+  margin-bottom: 32px;
+  color: #000;
+}
+.main__text p {
+  font: 500 18px/40px "Roboto", sans-serif;
+  margin-bottom: 48px;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  height: 120px;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 1438px;
+}
+.header__expanded {
+  width: 175px;
+}
+.header__logo {
+  height: 120px;
+  width: 65px;
+  background: url("assets/images/evan_burns_logo.svg");
+}
+.header__content {
+  width: 1088px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__sitename {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.header__description {
+  font-size: 18px;
+  line-height: 40px;
+  color: #727f89;
+  font-weight: 500;
+}
+.header__menu .menu {
+  display: flex;
+  align-items: center;
+}
+.header__menu .menu-item {
+  list-style: none;
+  line-height: 40px;
+  padding: 0 50px;
+  position: relative;
+  /* Social links */
+}
+.header__menu .menu-item:hover {
+  text-decoration: underline;
+}
+.header__menu .menu-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font: 400 18px/40px "Roboto", sans-serif;
+}
+.header__menu .menu-item.current-menu-item a {
+  color: #0d51ff;
+}
+.header__menu .menu-item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 2px;
+  top: 10px;
+  right: 0;
+  background: #d3e6ec;
+}
+.header__menu .menu-item:last-child {
+  padding-right: 0;
+}
+.header__menu .menu-item.twitter a {
+  font-size: 0;
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: url("assets/images/twitter.png");
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 112px;
+  width: 100%;
+  max-width: 1088px;
+  margin-bottom: 160px;
+}
+.about-me__photo {
+  width: 304px;
+  margin-right: 80px;
+  flex-shrink: 0;
+}
+.about-me__info {
+  width: 600px;
+  flex-grow: 1;
+}
+.about-me__title {
+  font: 700 62px/88px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 32px;
+}
+.about-me__text {
+  max-width: 500px;
+}
+.about-me__text p {
+  font: 400 18px/40px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 48px;
+}
+.about-me__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me__link {
+  display: flex;
+  align-items: center;
+}
+.about-me__link:after {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 31px;
+  background: url("assets/images/arrow.svg");
+  margin-left: 15px;
+}
+.about-me__sign {
+  margin-right: 60px;
+}
+
+.collection-list {
+  width: 100%;
+  background: #f1f8fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 0;
+}
+.collection-list__content {
+  width: 100%;
+  max-width: 1088px;
+}
+.collection-list__title {
+  font: 700 48px/88px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 48px;
+}
+
+.collection-list-item {
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 48px;
+  box-shadow: 0px 20px 40px rgba(17, 47, 74, 0.15);
+  position: relative;
+}
+.collection-list-item__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.collection-list-item__data {
+  padding: 48px 64px;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+}
+.collection-list-item__icon {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+.collection-list-item__text {
+  flex-grow: 1;
+}
+.collection-list-item__title {
+  font: 500 32px/48px "Roboto", sans-serif;
+  margin: 0 0 8px;
+}
+.collection-list-item__description {
+  font: 400 18px/40px "Roboto", sans-serif;
+  margin: 0;
+}
+
+.collection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collection__image {
+  width: 100%;
+}
+.collection__image img {
+  display: block;
+  max-width: 100%;
+}
+.collection__info {
+  width: 100%;
+  max-width: 1088px;
+  margin-top: -57px;
+  margin-bottom: 48px;
+}
+.collection__info p {
+  font: 400 18px/40px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 24px;
+}
+.collection__icon {
+  margin-bottom: 72px;
+}
+.collection__title {
+  font: 700 62px/88px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 32px;
+}
+.collection__tokens {
+  width: 100%;
+  max-width: 1088px;
+  margin-bottom: 48px;
+}
+.collection__subtitle {
+  font: 700 48px/88px "Roboto", sans-serif;
+  margin-bottom: 32px;
+}
+
+.contacts {
+  width: 100%;
+  max-width: 1088px;
+  padding-top: 60px;
+}
+.contacts__title {
+  font: 700 62px/88px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 32px;
+}
+.contacts__text p {
+  font: 400 18px/40px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 48px;
+  max-width: 740px;
+}
+
+.tokens-navigation {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  margin-bottom: 56px;
+}
+.tokens-navigation__item:not(:last-child) {
+  margin-right: 48px;
+}
+.tokens-navigation__link {
+  font: 500 16px/1 "Roboto", sans-serif;
+  color: #000;
+  position: relative;
+  text-decoration: none;
+}
+.tokens-navigation__link_active {
+  color: #0d51ff;
+}
+.tokens-navigation__link_active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -16px;
+  background: #0d51ff;
+}
+
+.crypto-pugs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.crypto-pugs__card {
+  margin: 0 24px 32px 0;
+}
+.crypto-pugs__image-wrapper {
+  position: relative;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.crypto-pugs__image {
+  display: block;
+}
+.crypto-pugs__name {
+  font: 500 17px/24px "Roboto", sans-serif;
+  color: #000;
+  margin: 0 0 8px;
+}
+.crypto-pugs__type {
+  font: 400 14px/16px "Roboto", sans-serif;
+  margin: 0;
+  color: #666;
+}
+.crypto-pugs__data {
+  border: 1px solid #c4dde2;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+}
+.crypto-pugs__link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+}
+.crypto-pugs__link:after {
+  content: "";
+  display: block;
+  background: #fff url("assets/images/link-arrow.svg") no-repeat 23px 28px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+.crypto-pugs__link:hover {
+  opacity: 1;
+}
+
+.secret-messages {
+  display: flex;
+}
+.secret-messages__card {
+  margin: 0 24px 32px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.secret-messages__card:nth-child(3n) {
+  margin-right: 0;
+}
+.secret-messages__image {
+  display: block;
+}
+.secret-messages__link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+}
+.secret-messages__link:after {
+  content: "";
+  display: block;
+  background: #fff url("assets/images/link-arrow.svg") no-repeat 23px 28px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+.secret-messages__link:hover {
+  opacity: 1;
+}
+
+.footer {
+  height: 144px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.footer__text {
+  margin: 0;
+  font: 400 18px/40px "Roboto", sans-serif;
+}

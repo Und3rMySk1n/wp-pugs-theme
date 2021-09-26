@@ -1,0 +1,13 @@
+.footer {
+  height: 144px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__text {
+    margin: 0;
+    font: $font-weight-light #{$font-size-main}/#{$line-height-main} $main-font-name;
+  }
+}

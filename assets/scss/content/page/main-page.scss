@@ -1,0 +1,58 @@
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 112px;
+    width: 100%;
+    max-width: $main-width;
+    margin-bottom: 160px;
+    
+    &__photo {
+      width: 304px;
+      margin-right: 80px;
+      flex-shrink: 0;
+    }
+    
+    &__info {
+      width: 600px;
+      flex-grow: 1;
+    }
+    
+    &__title {
+      font: $font-weight-bold #{$font-size-header}/#{$line-height-header} $main-font-name;
+      color: $text-color-main;
+      margin-bottom: 32px;
+    }
+  
+    &__text {
+      max-width: 500px;
+  
+      p {
+        font: $font-weight-light #{$font-size-main}/#{$line-height-main} $main-font-name;
+        color: $text-color-main;
+        margin-bottom: 48px;
+      }
+    }
+    
+    &__contacts {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    &__link {
+      display: flex;
+      align-items: center;
+      
+      &:after {
+        content: '';
+        display: block;
+        height: 16px;
+        width: 31px;
+        background: url('assets/images/arrow.svg');
+        margin-left: 15px;
+      }
+    }
+    
+    &__sign {
+      margin-right: 60px;
+    }
+  }

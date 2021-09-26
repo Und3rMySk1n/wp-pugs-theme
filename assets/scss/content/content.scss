@@ -1,0 +1,16 @@
+.content {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+@import 'page/main-page';
+@import 'page/collection-list';
+@import 'page/collection-page';
+@import 'page/contacts-page';
+
+@import 'components/tokens-navigation';
+@import 'collections/crypto-pugs';
+@import 'collections/secret-messages';

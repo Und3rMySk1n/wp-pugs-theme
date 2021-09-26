@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  font-family: $main-font-name;
+  color: $text-color-main;
+  
+  &__title {
+    font: $font-weight-bold #{$font-size-header}/#{$line-height-header} $main-font-name;
+    margin-bottom: 32px;
+    color: $text-color-main;
+  }
+  
+  &__text p {
+    font: $font-weight-normal #{$font-size-main}/#{$line-height-main} $main-font-name;
+    margin-bottom: 48px;
+    color: $text-color-main;
+  }
+}

@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  height: 120px;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: $main-width + (175px * 2);
+  
+  &__expanded {
+    width: 175px;
+  }
+  
+  &__logo {
+    height: 120px;
+    width: 65px;
+    background: url('assets/images/evan_burns_logo.svg');
+  }
+  
+  &__content {
+    width: $main-width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__sitename {
+    font-size: $font-size-main;
+    line-height: $line-height-main;
+    font-weight: $font-weight-bold;
+  }
+  
+  &__description {
+    font-size: $font-size-main;
+    line-height: $line-height-main;
+    color: $text-color-tooltip;
+    font-weight: $font-weight-normal;
+  }
+  
+  &__menu {
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+    
+    .menu-item {
+      list-style: none;
+      line-height: 40px;
+      padding: 0 50px;
+      position: relative;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+      
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $text-color-main;
+        font: $font-weight-light #{$font-size-main}/#{$line-height-main} $main-font-name;
+      }
+      
+      &.current-menu-item a {
+        color: $link-color;
+      }
+      
+      &:not(:last-child) {
+        &:after {
+          content: '';
+          position: absolute;
+          display: block;
+          height: 20px;
+          width: 2px;
+          top: 10px;
+          right: 0;
+          background: #d3e6ec;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      /* Social links */
+      &.twitter a {
+        font-size: 0;
+        display: block;
+        height: 40px;
+        width: 40px;
+        background: url('assets/images/twitter.png');
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.tokens-navigation {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    margin-bottom: 56px;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 48px;
+        }
+    }
+
+    &__link {
+        font: $font-weight-normal #{$font-size-link}/1 $main-font-name;
+        color: $text-color-main;
+        position: relative;
+        text-decoration: none;
+
+        &_active {
+            color: $link-color;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -16px;
+                background: $link-color;
+            }
+        }
+    }
+}

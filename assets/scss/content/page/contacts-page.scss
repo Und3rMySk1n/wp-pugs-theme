@@ -1,0 +1,20 @@
+.contacts {
+    width: 100%;
+    max-width: $main-width;
+    padding-top: 60px;
+
+    &__title {
+        font: $font-weight-bold #{$font-size-header}/#{$line-height-header} $main-font-name;
+        color: $text-color-main;
+        margin-bottom: 32px;
+      }
+    
+      &__text {
+        p {
+          font: $font-weight-light #{$font-size-main}/#{$line-height-main} $main-font-name;
+          color: $text-color-main;
+          margin-bottom: 48px;
+          max-width: 740px;
+        }
+      }
+}
