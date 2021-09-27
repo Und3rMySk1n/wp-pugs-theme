@@ -86,8 +86,8 @@ Description: Crypto Pugs Theme
   position: relative;
   /* Social links */
 }
-.header__menu .menu-item:hover {
-  text-decoration: underline;
+.header__menu .menu-item:hover a {
+  color: #0d51ff;
 }
 .header__menu .menu-item a {
   text-decoration: none;
@@ -327,6 +327,9 @@ Description: Crypto Pugs Theme
 .crypto-pugs__card {
   margin: 0 24px 32px 0;
 }
+.crypto-pugs__card:nth-child(4n) {
+  margin-right: 0;
+}
 .crypto-pugs__image-wrapper {
   position: relative;
   border-radius: 8px 8px 0 0;
@@ -334,6 +337,7 @@ Description: Crypto Pugs Theme
 }
 .crypto-pugs__image {
   display: block;
+  max-width: 100%;
 }
 .crypto-pugs__name {
   font: 500 17px/24px "Roboto", sans-serif;

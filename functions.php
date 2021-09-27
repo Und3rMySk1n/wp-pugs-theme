@@ -10,6 +10,9 @@ if (function_exists( 'add_image_size' )) {
 	add_image_size('collection-page', 1920, 407, true);
 	add_image_size('main-photo', 304, 304, true);
     add_image_size('contact-photo', 200, 200, true);
+
+    add_image_size('pug', 254, 339, true);
+    add_image_size('pug-x2', 508, 678, true);
 }
 
 function create_collections_taxonomy() {

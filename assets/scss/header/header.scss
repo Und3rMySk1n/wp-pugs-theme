@@ -47,8 +47,8 @@
       padding: 0 50px;
       position: relative;
       
-      &:hover {
-        text-decoration: underline;
+      &:hover a {
+        color: $link-color;
       }
       
       a {
