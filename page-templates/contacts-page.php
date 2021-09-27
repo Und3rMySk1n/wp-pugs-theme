@@ -15,6 +15,8 @@ while (have_posts()): the_post();
     </div>
 </div>
 
+<?php get_template_part( 'template-parts/contacts-people' ); ?>
+
 <?php 
 endwhile;
 get_footer();

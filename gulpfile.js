@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass')(require('sass'));
+var cssnano = require('gulp-cssnano');
 
 var paths = {
     styles: {
@@ -14,6 +15,7 @@ var paths = {
 function styles() {
     return gulp.src(paths.styles.main)
         .pipe(sass().on('error', sass.logError))
+        .pipe(cssnano())
         .pipe(gulp.dest(paths.styles.dest));
 }
 

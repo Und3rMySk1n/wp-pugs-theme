@@ -1,7 +1,7 @@
 .contacts {
     width: 100%;
     max-width: $main-width;
-    padding-top: 60px;
+    padding: 60px 0 40px;
 
     &__title {
         font: $font-weight-bold #{$font-size-header}/#{$line-height-header} $main-font-name;
@@ -13,8 +13,86 @@
         p {
           font: $font-weight-light #{$font-size-main}/#{$line-height-main} $main-font-name;
           color: $text-color-main;
-          margin-bottom: 48px;
+          margin-bottom: 24px;
           max-width: 740px;
         }
       }
+}
+
+.people {
+  width: 100%;
+  max-width: $main-width;
+  display: flex;
+
+  &__card {
+    width: 400px;
+    flex-grow: 1;
+    
+    &:first-child {
+      margin-right: 92px;
+    }
+  }
+
+  &__photo {
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 58px;
+  }
+
+  &__name {
+    font: $font-weight-bold #{$font-size-subheader}/#{$line-height-header} $main-font-name;
+    color: $text-color-main;
+    margin-bottom: 8px;
+  }
+
+  &__post {
+    font: $font-weight-light #{$font-size-contact-secondary}/#{$line-height-main} $main-font-name;
+    color: $text-color-caption;
+    margin: 0;
+  }
+
+  &__socials {
+    margin: 40px 0 132px;
+  }
+}
+
+.socials {
+  padding: 45px 0;
+  border-top: 1px solid #e1e9eb;
+
+  &__link {
+    margin: 0 0 32px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      height: 40px;
+      width: 40px;
+      flex-shrink: 0;
+      margin: 0 24px 0 0;
+    }
+
+    a {
+      font: $font-weight-normal #{$font-size-contact-secondary}/#{$line-height-main} $main-font-name;
+      color: $text-color-main;
+      text-decoration: none;
+    }
+
+    &_twitter:before {
+      background: url("assets/images/twitter.svg");
+    }
+
+    &_telegram:before {
+      background: url("assets/images/telegram.svg");
+    }
+
+    &_instagram:before {
+      background: url("assets/images/instagram.svg");
+    }
+  }
 }
