@@ -1,7 +1,7 @@
 <?php
     $collection = $args['collection'];
     $messages = get_posts([
-        'numberposts' => 0,
+        'numberposts' => -1,
         'post_type'   => 'tokens',
         'tax_query' => [
             [

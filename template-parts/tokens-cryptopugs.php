@@ -10,7 +10,7 @@
     $currentType = (isset($_GET['type']) ? $_GET['type'] : '');
     $currentCollection = !$currentType ? $collection : findCollectionByType($types, $currentType);
     $pugs = $currentCollection ? get_posts([
-        'numberposts' => 0,
+        'numberposts' => -1,
         'post_type'   => 'tokens',
         'tax_query' => [
             [

@@ -1,6 +1,6 @@
 <?php
     $people = get_posts([
-        'numberposts' => 0,
+        'numberposts' => -1,
         'post_type'   => 'contacts',
         'order' => 'ASC',
     ]);
