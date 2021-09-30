@@ -1,5 +1,5 @@
 // Size
-$main-width: 1088px;
+$main-width: 1128px;
 
 // Fonts
 $main-font-name: 'Roboto', sans-serif;
@@ -18,6 +18,25 @@ $line-height-main: 40px;
 $line-height-header: 88px;
 $line-height-item-header: 48px;
 
+
+// Medium size fonts
+$font-size-header-m: 54px;
+$font-size-header-s: 42px;
+
+$font-size-subheader-m: 42px;
+$font-size-subheader-s: 36px;
+
+$font-size-main-s: 16px;
+$font-size-item-header-s: 28px;
+
+$line-height-main-s: 32px;
+$line-height-item-header-s: 40px;
+
+$line-height-header-m: 64px;
+$line-height-header-s: 58px;
+$line-height-subheader-s: 48px;
+
+
 // Colors
 $text-color-main: #000;
 $text-color-tooltip: #727f89;
@@ -31,5 +50,4 @@ $line-height-token-type: 16px;
 $line-height-token-name: 24px;
 
 $text-color-caption: #666;
-
 

@@ -15,8 +15,9 @@ if (function_exists( 'add_image_size' )) {
     add_image_size('pug-x2', 508, 678, true);
 }
 
-function add_styles() {
-    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/style.css', null, '1.1');
+function add_styles_and_scripts() {
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/style.css', null, '1.2');
+    wp_enqueue_script('app', get_stylesheet_directory_uri() . '/assets/js/app.js', null, '1.2', true);
 }
 
 function create_collections_taxonomy() {
@@ -145,6 +146,6 @@ function set_collection_menu_item_active($classes, $item) {
 add_action('init', 'create_collections_taxonomy', 0);
 add_action('init', 'add_contact_post_type', 1);
 add_action('init', 'add_token_post_type', 2);
-add_action('wp_enqueue_scripts', 'add_styles', 3);
+add_action('wp_enqueue_scripts', 'add_styles_and_scripts', 3);
 
 add_filter('nav_menu_css_class', 'set_collection_menu_item_active', 10, 2);

@@ -10,9 +10,7 @@
 ?>
 
 <div class="collection">
-    <div class="collection__image">
-        <img src="<?= $imageSrc ?>" alt="<?= $term->name . ' ' . __('Image', 'pugs') ?>">
-    </div>
+    <div class="collection__image" style="background-image: url('<?= $imageSrc ?>')"></div>
     <div class="collection__info">
         <img class="collection__icon" src="<?= $iconSrc ?>" alt="<?= $term->name . ' ' . __('Icon', 'pugs') ?>">
         <h1 class="collection__title"><?= $term->name ?></h1>

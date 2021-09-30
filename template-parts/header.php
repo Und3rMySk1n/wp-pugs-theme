@@ -8,10 +8,16 @@
       <span class="header__description"><?= get_bloginfo('description') ?></span>
     </div>
     <div class="header__navigation">
-      <div class="header__menu">
+      <div class="header__menu" id="topMenu">
         <?php wp_nav_menu(); ?> 
       </div>
-      <div class="header__links"></div>
+    </div>
+    <div class="header__hamburger hamburger">
+      <button class="hamburger__button" id="hamburger">
+        <span class="hamburger__line hamburger__line_top"></span>
+        <span class="hamburger__line hamburger__line_middle"></span>
+        <span class="hamburger__line hamburger__line_bottom"></span>
+      </button>
     </div>
   </div>
   <div class="header__expanded"></div>

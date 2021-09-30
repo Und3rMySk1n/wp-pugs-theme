@@ -9,6 +9,7 @@
     &__content {
         width: 100%;
         max-width: $main-width;
+        padding: 0 20px;
     }
 
     &__title {
@@ -63,5 +64,69 @@
     &__description {
         font: $font-weight-light #{$font-size-main}/#{$line-height-main} $main-font-name;
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .collection-list {
+        padding: 60px 0;
+
+        &__title {
+            font-size: $font-size-subheader-m;
+            line-height: $line-height-header-m;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .collection-list-item {
+        &__data {
+            padding: 40px 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .collection-list-item {
+        &__data {
+            padding: 40px 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .collection-list-item {
+        border-radius: 16px;
+        margin-bottom: 32px;
+
+        &__data {
+            padding: 32px;
+        }
+
+        &__title {
+            font-size: $font-size-item-header-s;
+            line-height: $line-height-item-header-s;
+        }
+
+        &__description {
+            font-size: $font-size-main-s;
+            line-height: $line-height-main-s;
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .collection-list {
+        padding: 42px 0;
+
+        &__title {
+            font-size: $font-size-subheader-s;
+            line-height: $line-height-header-s;
+            margin-bottom: 32px;
+        }
     }
 }

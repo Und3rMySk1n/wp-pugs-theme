@@ -1,3 +1,5 @@
+@import 'components/hamburger';
+
 .header {
   display: flex;
   height: 120px;
@@ -17,6 +19,7 @@
   
   &__content {
     width: $main-width;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,6 +90,80 @@
         width: 40px;
         background: url('assets/images/twitter.svg');
       }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  .header {
+    max-width: none;
+    justify-content: center;
+
+    &__expanded {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+
+    &__menu {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      z-index: 1;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .menu {
+        flex-direction: column;
+      }
+
+      .menu-item {
+        padding: 0;
+        width: 100%;
+
+        &:not(:last-child) {
+          &:after {
+            display: none;
+          }
+        }
+
+        a {
+          display: block;
+          padding: 0 20px;
+          text-align: center;
+          line-height: 60px;
+        }
+
+        &.twitter a {
+          font-size: $font-size-main;
+          width: auto;
+          background: none;
+        }
+      }
+    }
+
+    &__hamburger {
+      display: block;
     }
   }
 }

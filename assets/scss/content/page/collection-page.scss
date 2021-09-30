@@ -6,16 +6,15 @@
 
     &__image {
         width: 100%;
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
+        height: 400px;
+        background-size: cover;
+        background-position: center center;
     }
 
     &__info {
         width: 100%;
         max-width: $main-width;
+        padding: 0 20px;
         margin-top: -57px;
         margin-bottom: 48px;
 
@@ -39,11 +38,65 @@
     &__tokens {
         width: 100%;
         max-width: $main-width;
+        padding: 0 20px;
         margin-bottom: 48px;
     }
 
     &__subtitle {
         font: $font-weight-bold #{$font-size-subheader}/#{$line-height-header} $main-font-name;
         margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .collection {
+        &__image {
+            height: 25vw;
+            min-height: 180px;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .collection {
+        &__icon {
+            margin-bottom: 24px;
+        }
+
+        &__title {
+            font-size: $font-size-header-m;
+            line-height: $line-height-header-m;
+            margin-bottom: 24px;
+        }
+
+        &__subtitle {
+            font-size: $font-size-subheader-m;
+            line-height: $line-height-header-m;
+            margin-bottom: 24px;
+        }
+
+        &__info p {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .collection {
+        &__title {
+            font-size: $font-size-header-s;
+            line-height: $line-height-header-s;
+        }
+
+        &__subtitle {
+            font-size: $font-size-subheader-s;
+            line-height: $line-height-subheader-s;
+        }
+
+        &__info {
+            p {
+                line-height: $line-height-main-s;
+            }
+        }
     }
 }

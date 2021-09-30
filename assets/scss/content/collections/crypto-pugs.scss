@@ -1,13 +1,10 @@
 .crypto-pugs {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px 24px;
 
     &__card {
-        margin: 0 24px 32px 0;
-
-        &:nth-child(4n) {
-            margin-right: 0;
-        }
+        max-width: 254px;
     }
 
     &__image-wrapper {
@@ -65,4 +62,22 @@
             opacity: 1;
         }
     } 
+}
+
+@media screen and (max-width: 850px) {
+    .crypto-pugs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .crypto-pugs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .crypto-pugs {
+        grid-template-columns: 1fr;
+    }
 }

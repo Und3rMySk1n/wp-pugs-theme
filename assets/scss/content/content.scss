@@ -14,3 +14,9 @@
 @import 'components/tokens-navigation';
 @import 'collections/crypto-pugs';
 @import 'collections/secret-messages';
+
+@media screen and (max-width: 960px) {
+  .content {
+    padding-top: 80px;
+  }
+}
