@@ -17,6 +17,15 @@
         <p class="collection__description"><?= $text ?></p>
     </div>
     
+    <?php 
+        if ($slug === 'cryptopugs')
+        {
+            get_template_part( 'template-parts/summary/cryptopugs', null, [
+                'collection' => $term,
+            ]);
+        }
+    ?>
+
     <div class="collection__tokens">
         <?php get_template_part( 'template-parts/tokens-' .  $slug, null, [
             'collection' => $term,
