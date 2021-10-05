@@ -2,6 +2,21 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 32px 24px;
+    transition: visibility 0.75s ease, opacity 0.75s ease;
+
+    &.active {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    &.visible {
+        visibility: visible;
+        opacity: 1;
+    }
 
     &__card {
         max-width: 254px;

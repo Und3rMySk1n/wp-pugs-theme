@@ -16,6 +16,11 @@
         color: $text-color-main;
         position: relative;
         text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            color: $link-color;
+        }
 
         &_active {
             color: $link-color;

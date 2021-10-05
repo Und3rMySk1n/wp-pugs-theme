@@ -7,11 +7,11 @@
     $homeUrl = get_home_url();
 ?>
 
-<ul class="tokens-navigation">
+<ul class="tokens-navigation" id="tokensNavigation">
     <li class="tokens-navigation__item">
         <a
             class="tokens-navigation__link <?= ($currentType === '' ? 'tokens-navigation__link_active' : '') ?>"
-            href="<?= add_query_arg(['collections' => $collection->slug], $homeUrl); ?>"
+            data-collection-link="all"
         >
             <?= $allTokensText ?>
         </a>
@@ -27,7 +27,7 @@
         <li class="tokens-navigation__item">
             <a
                 class="tokens-navigation__link <?= $additionalClass ?>"
-                href="<?= $link ?>"
+                data-collection-link="<?= $type->slug ?>"
             >
                 <?= $type->name ?>
             </a>

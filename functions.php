@@ -16,8 +16,8 @@ if (function_exists( 'add_image_size' )) {
 }
 
 function add_styles_and_scripts() {
-    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/style.css', null, '1.3');
-    wp_enqueue_script('app', get_stylesheet_directory_uri() . '/assets/js/app.js', null, '1.2', true);
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/style.css', null, '1.4');
+    wp_enqueue_script('app', get_stylesheet_directory_uri() . '/assets/js/app.js', null, '1.3', true);
 }
 
 function create_collections_taxonomy() {
