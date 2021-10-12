@@ -4,8 +4,13 @@ var gulp = require('gulp');
 var sass = require('gulp-sass')(require('sass'));
 var cssnano = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
+var merge = require('merge-stream');
+var concat = require('gulp-concat');
 
 var paths = {
+    theme: {
+        info: 'src/theme-info.css',
+    },
     styles: {
         src: 'src/scss/**/*.scss',
         main: 'src/scss/style.scss',
@@ -18,9 +23,13 @@ var paths = {
 };
 
 function styles() {
-    return gulp.src(paths.styles.main)
+    var description = gulp.src(paths.theme.info);
+    var compressed = gulp.src(paths.styles.main)
         .pipe(sass().on('error', sass.logError))
-        .pipe(cssnano())
+        .pipe(cssnano());
+
+    return merge(description, compressed)
+        .pipe(concat('style.css'))
         .pipe(gulp.dest(paths.styles.dest));
 }
 
